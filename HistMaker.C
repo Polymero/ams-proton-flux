@@ -415,9 +415,9 @@ void MIRJA::runAnalysis() {
         chainMCInfo->GetEntry(i);
 
         // Get MC generation parameters
-        double generatedNumber = chainMCInfo->ngen_datacard;
-        double rigidityMinimum = chainMCInfo->momentum[0];
-        double rigidityMaximum = chainMCInfo->momentum[1];
+        double generatedNumber = classMCInfo->ngen_datacard;
+        double rigidityMinimum = classMCInfo->momentum[0];
+        double rigidityMaximum = classMCInfo->momentum[1];
 
         // 1/R generation spectrum (normalised)
         TF1 *generatedFlux = new TF1("generatedFlux", "[0]/(x)", rigidityMinimum, rigidityMaximum);
