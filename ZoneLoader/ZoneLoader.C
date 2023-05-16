@@ -86,7 +86,7 @@ class MIRJA {
     // CLASS CONSTRUCTORS
     //-------------------------------------------------------------------------------
 
-    MIRJA() { // Default constructor
+    MIRJA(int fileStart, int fileEnd) { // Default constructor
 
         // ROOT gStyle configuration
         gStyle->SetOptTitle(0);
@@ -100,8 +100,10 @@ class MIRJA {
         }
 
         // Read the data trees
-        chainCompact->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/1330881978.root");
-        chainRTI->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/1330881978.root");
+        for (int i = fileStart; i <= fileEnd; i++) {
+            chainCompact->Add(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i));
+            chainRTI->Add(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i));
+        }
 
         // Set branch addresses
         chainCompact->SetBranchAddress("Compact", &classCompact);
@@ -284,8 +286,11 @@ void MIRJA::run() {
 //-----------------------------------------------------------------------------------
 
 void ZoneLoader() {
+    
+    const int fileStart = 1330881978;
+    const int fileEnd   = 1330881979;
 
-    MIRJA *classMirja = new class MIRJA();
+    MIRJA *classMirja = new class MIRJA(fileStart, fileEnd);
 
     classMirja->run();
 
