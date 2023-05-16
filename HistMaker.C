@@ -331,9 +331,9 @@ void MIRJA::runAnalysis() {
                       (boolBeta << 4) + (boolChiSquared << 5) + (boolInnerLayer << 6);
         
         // Acceptance() --> Geometric Aperature Acceptance as a function of rigidity
-        montecarloDetected->Fill(chainMCCompact->trk_rig[0]);
+        montecarloDetected->Fill(classMCCompact->trk_rig[0]);
         if ((boolBit & 0x7F) == 0x7F) { // 0x7F = 0b01111111 (All)
-            montecarloSelected->Fill(chainMCCompact->trk_rig[0]);
+            montecarloSelected->Fill(classMCCompact->trk_rig[0]);
         }
 
         // TrigEff(): MC --> Trigger efficiency as a function of rigidity
