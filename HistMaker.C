@@ -103,7 +103,7 @@ class MIRJA {
     // CLASS CONSTRUCTORS
     //-------------------------------------------------------------------------------
 
-    MIRJA(const char rootFiles = "13300*.root") { // Default constructor
+    MIRJA() { // Default constructor
 
         // ROOT gStyle configuration
         gStyle->SetOptTitle(0);
@@ -117,8 +117,8 @@ class MIRJA {
         }
 
         // Read the data trees
-        chainCompact->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/" + rootFiles);
-        chainRTI->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/" + rootFiles);
+        chainCompact->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/13300*.root");
+        chainRTI->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/13300*.root");
         chainMCCompact->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/full/Pr.B1200/pr.pl1.05100.4_00/*.root");
         chainMCInfo->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/full/Pr.B1200/pr.pl1.05100.4_00/*.root");
 
