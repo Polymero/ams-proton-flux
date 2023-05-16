@@ -287,8 +287,8 @@ void MIRJA::run() {
 
 void ZoneLoader() {
     
-    const int fileStart = 1330881978;
-    const int fileEnd   = 1330881979;
+    const int fileStart = 1307499168;
+    const int fileEnd   = 1309717509;
 
     MIRJA *classMirja = new class MIRJA(fileStart, fileEnd);
 
