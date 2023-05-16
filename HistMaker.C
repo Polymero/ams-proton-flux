@@ -53,7 +53,7 @@ class MIRJA {
     double rigidityCutOff = 1.2;
 
     // New file object
-    TFile *f = new TFile("/afs/cern.ch/usr/s/svenenda/public/ams-proton-flux/ProtonHistogramsAMS02.root", "recreate");
+    TFile *f = new TFile("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ProtonHistogramsAMS02.root", "recreate");
 
     // RTI map
     map<int, std::pair<float, float>> RTIMap = map<int, std::pair<float, float>>();
@@ -117,10 +117,10 @@ class MIRJA {
         }
 
         // Read the data trees
-        chainCompact->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/13300*.root");
-        chainRTI->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/13300*.root");
-        chainMCCompact->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/full/Pr.B1200/pr.pl1.05100.4_00/*.root");
-        chainMCInfo->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/full/Pr.B1200/pr.pl1.05100.4_00/*.root");
+        chainCompact->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/1330881978.root");
+        chainRTI->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/1330881978.root");
+        chainMCCompact->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/full/Pr.B1200/pr.pl1.05100.4_00/604*.root");
+        chainMCInfo->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/full/Pr.B1200/pr.pl1.05100.4_00/604*.root");
 
         // Set branch addresses
         chainCompact->SetBranchAddress("Compact", &classCompact);
