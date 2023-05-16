@@ -1,9 +1,9 @@
 executable = HistMaker.sh
 arguments  = $(ClusterID) $(ProcId)
-output     = test.$(ClusterId).$(ProcId).out
-error      = test.$(ClusterId).$(ProcId).err
-log        = test.$(ClusterId).log
+output     = HistMaker.$(ClusterId).$(ProcId).out
+error      = HistMaker.$(ClusterId).$(ProcId).err
+log        = HistMaker.$(ClusterId).log
 
-+JobFlavour = "espresso"
++JobFlavour = "longlunch"
 
 queue
