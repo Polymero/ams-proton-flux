@@ -1,4 +1,4 @@
-executable = test.sh
+executable = HistMaker.sh
 arguments  = $(ClusterID) $(ProcId)
 output     = test.$(ClusterId).$(ProcId).out
 error      = test.$(ClusterId).$(ProcId).err
