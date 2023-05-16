@@ -103,7 +103,7 @@ class MIRJA {
     // CLASS CONSTRUCTORS
     //-------------------------------------------------------------------------------
 
-    MIRJA(string rootFiles = "13300*.root") { // Default constructor
+    MIRJA(const char rootFiles = "13300*.root") { // Default constructor
 
         // ROOT gStyle configuration
         gStyle->SetOptTitle(0);
