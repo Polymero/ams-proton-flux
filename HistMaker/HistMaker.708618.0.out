@@ -8,3 +8,15 @@
 
 
 Processing /afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C...
+
+Class succesfully constructed!
+
+Starting MIRJA.runAnalysis()...
+Looping over RTIInfo data... (1/6)
+Number of RTIInfo entries: 0
+
+Looping over Compact data... (2/6)
+Number of Compact entries: 0
+
+Looping over Proton Monte-Carlo Compact data... (3/6)
+Number of Proton Monte-Carlo Compact entries: 250589410
