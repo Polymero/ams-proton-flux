@@ -20,7 +20,7 @@
 #include "TH1F.h"
 #include "TH2.h"
 #include "TCanvas.h"
-#include "Tobject.h"
+#include "TObject.h"
 #include "TString.h"
 // Local headers
 #include "Header Files/Ntp.h"
@@ -439,7 +439,7 @@ void MIRJA::runAnalysis() {
 
         // Progress tracker
         int progress = (chainMCInfoNumber / 100);
-        if (i % progress = 0) {
+        if (i % progress == 0) {
             cout << "#" << flush;
         }
 
