@@ -1,0 +1,9 @@
+executable = test.sh
+arguments  = $(ClusterID) $(ProcId)
+output     = test.$(ClusterId).$(ProcId).out
+error      = test.$(ClusterId).$(ProcId).err
+log        = test.$(ClusterId).log
+
++JobFlavour = "espresso"
+
+queue
