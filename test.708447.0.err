@@ -1,0 +1,42 @@
+In file included from input_line_107:1:
+/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C:23:10: fatal error: 'Tobject.h' file not found
+#include "Tobject.h"
+         ^~~~~~~~~~~
+/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C:120:23: error: no matching member function for call to 'Add'
+        chainCompact->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/" + rootFiles);
+        ~~~~~~~~~~~~~~^~~
+/cvmfs/sft.cern.ch/lcg/app/releases/ROOT/6.20.08/x86_64-centos7-gcc48-opt/include/TChain.h:74:22: note: candidate function not viable: no known conversion from 'basic_string<char, std::char_traits<char>, std::allocator<char> >' to 'TChain *' for 1st argument
+   virtual Int_t     Add(TChain* chain);
+                     ^
+/cvmfs/sft.cern.ch/lcg/app/releases/ROOT/6.20.08/x86_64-centos7-gcc48-opt/include/TChain.h:75:22: note: candidate function not viable: no known conversion from 'basic_string<char, std::char_traits<char>, std::allocator<char> >' to 'const char *' for 1st argument
+   virtual Int_t     Add(const char* name, Long64_t nentries = TTree::kMaxEntries);
+                     ^
+In file included from input_line_107:1:
+/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C:121:19: error: no matching member function for call to 'Add'
+        chainRTI->Add("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/" + rootFiles);
+        ~~~~~~~~~~^~~
+/cvmfs/sft.cern.ch/lcg/app/releases/ROOT/6.20.08/x86_64-centos7-gcc48-opt/include/TChain.h:74:22: note: candidate function not viable: no known conversion from 'basic_string<char, std::char_traits<char>, std::allocator<char> >' to 'TChain *' for 1st argument
+   virtual Int_t     Add(TChain* chain);
+                     ^
+/cvmfs/sft.cern.ch/lcg/app/releases/ROOT/6.20.08/x86_64-centos7-gcc48-opt/include/TChain.h:75:22: note: candidate function not viable: no known conversion from 'basic_string<char, std::char_traits<char>, std::allocator<char> >' to 'const char *' for 1st argument
+   virtual Int_t     Add(const char* name, Long64_t nentries = TTree::kMaxEntries);
+                     ^
+In file included from input_line_107:1:
+/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C:334:50: error: no member named 'trk_rig' in 'TChain'
+        montecarloDetected->Fill(chainMCCompact->trk_rig[0]);
+                                 ~~~~~~~~~~~~~~  ^
+/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C:336:54: error: no member named 'trk_rig' in 'TChain'
+            montecarloSelected->Fill(chainMCCompact->trk_rig[0]);
+                                     ~~~~~~~~~~~~~~  ^
+/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C:418:47: error: no member named 'ngen_datacard' in 'TChain'
+        double generatedNumber = chainMCInfo->ngen_datacard;
+                                 ~~~~~~~~~~~  ^
+/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C:419:47: error: no member named 'momentum' in 'TChain'
+        double rigidityMinimum = chainMCInfo->momentum[0];
+                                 ~~~~~~~~~~~  ^
+/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C:420:47: error: no member named 'momentum' in 'TChain'
+        double rigidityMaximum = chainMCInfo->momentum[1];
+                                 ~~~~~~~~~~~  ^
+/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/HistMaker.C:442:26: error: expression is not assignable
+        if (i % progress = 0) {
+            ~~~~~~~~~~~~ ^
