@@ -479,9 +479,9 @@ void LIMI::run() {
 
         } else {
 
-            flux[i] = rate[i] / acceptanceSelected[i + 1] 
-                      / triggerEfficiency[i + 1] * mcTriggerEfficiency[i + 1]
-                      / selectionEfficiency[i + 1] * mcSelectionEfficiency[i + 1];
+            flux[i] = rate[i] / acceptanceSelected[i] 
+                      / triggerEfficiency[i] * mcTriggerEfficiency[i]
+                      / selectionEfficiency[i] * mcSelectionEfficiency[i];
 
             fluxErrors[i] = flux[i] * TMath::Sqrt( 1 / eventsSelected[i]
                             + pow(triggerEfficiencyErrors[i] / triggerEfficiency[i], 2) 
