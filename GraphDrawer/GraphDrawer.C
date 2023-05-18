@@ -138,7 +138,7 @@ void LIMI::run() {
 
     }
     
-    cout << eventsDetected << endl;
+    cout << eventsDetected[0] << endl;
 
     // Create TGraphs
     TGraphErrors *gEventsDetected = new TGraphErrors(binNumber, binCentres, eventsDetected, binErrors, eventsDetectedErrors);
