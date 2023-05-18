@@ -348,7 +348,7 @@ void LIMI::run() {
     TH1F *hMCInnerLayer = new TH1F();
 
     // Get relevant histograms
-    hTracker      = (TH1F*)histFile->Get("triggersPhysical");
+    hTracker      = (TH1F*)histFile->Get("baseTracker");
     hTOF          = (TH1F*)histFile->Get("baseTOF");
     hParticle     = (TH1F*)histFile->Get("cutParticle");
     hBeta         = (TH1F*)histFile->Get("cutBeta");
