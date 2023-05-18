@@ -23,7 +23,7 @@
 #include "Tobject.h"
 #include "TString.h"
 // Local headers
-#include "Header Files/Ntp.h"
+#include "../Header Files/Ntp.h"
 
 
 //-----------------------------------------------------------------------------------
