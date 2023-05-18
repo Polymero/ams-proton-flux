@@ -379,7 +379,7 @@ void LIMI::run() {
     for (int i=0; i < binNumber; i++) {
 
         selectionEfficiency[i]   = hParticle->GetBinContent(i + 1) * hBeta->GetBinContent(i + 1) * hChiSquared->GetBinContent(i + 1) * hInnerLayer->GetBinContent(i + 1);
-        mcSelectionEfficiency[i] = hMCParticle->GetBinContent(i + 1) *hMCBeta->GetBinContent(i + 1) * hMCChiSquared->GetBinContent(i + 1) * hMCInnerLayer->GetBinContent(i + 1);
+        mcSelectionEfficiency[i] = hMCParticle->GetBinContent(i + 1) * hMCBeta->GetBinContent(i + 1) * hMCChiSquared->GetBinContent(i + 1) * hMCInnerLayer->GetBinContent(i + 1);
 
     }
 
@@ -401,7 +401,7 @@ void LIMI::run() {
     gMCSelectionEfficiency->SetMarkerColor(kRed);
 
     // Axes
-    gSelectionEfficiency->SetMaximum(1.0);
+    gSelectionEfficiency->SetMaximum(2.0);
     gSelectionEfficiency->SetMinimum(0.0);
     gSelectionEfficiency->GetXaxis()->SetTitle("R [GV]");
     gSelectionEfficiency->GetYaxis()->SetTitle("Selection Efficiency");
