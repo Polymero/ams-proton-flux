@@ -65,7 +65,7 @@ class LIMI {
         gStyle->SetOptLogx(1);
 
         // Bin properties
-        for (int i=0; i<Bin_num; i++) {
+        for (int i=0; i < binNumber; i++) {
             binErrors[i] = (binEdges[i + 1] - binEdges[i]) / 2;
             binCentres[i] = (binEdges[i + 1] + binEdges[i]) / 2;
         }
@@ -159,7 +159,7 @@ void LIMI::run() {
 
     // Print
     cEvents->Draw();
-    cEvents->print(("Events.png").c_str());
+    cEvents->Print(("Events.png").c_str());
 
 
     //-------------------------------------------------------------------------------
