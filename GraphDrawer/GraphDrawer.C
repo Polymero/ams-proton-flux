@@ -172,7 +172,7 @@ void LIMI::run() {
     cout << "Creating ExposureTime graph... (2/?)" << endl;
 
     // Create histograms
-    TH1F hExposureTime = new TH1F("exposureTime", "Exposure Time per Rigidity Bin", 32, binEdges);
+    TH1F *hExposureTime = new TH1F("exposureTime", "Exposure Time per Rigidity Bin", 32, binEdges);
 
     // Get relevant histograms
     hExposureTime = (TH1F*) histFile->Get("exposureTime");
