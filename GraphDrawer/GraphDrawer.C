@@ -163,7 +163,7 @@ void LIMI::run() {
 
     // Print
     cEvents->Draw();
-    cEvents->Print(("Events.png").c_str());
+    cEvents->Print("Events.png");
 
 
     //-------------------------------------------------------------------------------
@@ -204,7 +204,7 @@ void LIMI::run() {
 
     // Print
     cExposureTime->Draw();
-    cExposureTime->Print(("ExposureTime.png").c_str());
+    cExposureTime->Print("ExposureTime.png");
 
 
     //-------------------------------------------------------------------------------
