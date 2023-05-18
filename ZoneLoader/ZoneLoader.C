@@ -54,7 +54,7 @@ class MIRJA {
     double rigidityCutOff = 1.2;
 
     // New file object
-    TFile *f = new TFile("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLoader/Zone02AMS02.root", "recreate");
+    TFile *f = new TFile("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLoader/Zone03AMS02.root", "recreate");
 
     // RTI map
     map<int, std::pair<float, float>> RTIMap = map<int, std::pair<float, float>>();
@@ -297,8 +297,11 @@ void ZoneLoader() {
     // const int fileStart = 1307499168;
     // const int fileEnd   = 1309717509;
 
-    const int fileStart = 1309717509;
-    const int fileEnd   = 1311935851;
+    // const int fileStart = 1309717509;
+    // const int fileEnd   = 1311935851;
+
+    const int fileStart = 1311935851;
+    const int fileEnd   = 1314154192;
 
     MIRJA *classMirja = new class MIRJA(fileStart, fileEnd);
 
