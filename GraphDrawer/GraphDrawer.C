@@ -116,8 +116,8 @@ void LIMI::run() {
     cout << "Creating Events graph... (1/?)" << endl;
 
     // Create histograms
-    TH1F *hEventsDetected = new TH1F("eventsDetected", "Detected Events per Rigidity Bin", 32, binEdges);
-    TH1F *hEventsSelected = new TH1F("eventsSelected", "Selected Events per Rigidity Bin", 32, binEdges);
+    //TH1F *hEventsDetected = new TH1F("eventsDetected", "Detected Events per Rigidity Bin", 32, binEdges);
+    //TH1F *hEventsSelected = new TH1F("eventsSelected", "Selected Events per Rigidity Bin", 32, binEdges);
 
     // Get relevant histograms
     hEventsDetected = (TH1F*) histFile->Get("eventsDetected");
