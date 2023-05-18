@@ -109,6 +109,10 @@ void LIMI::run() {
     //-------------------------------------------------------------------------------
     cout << "Creating Events graph... (1/?)" << endl;
 
+    // Create histograms
+    TH1F *hEventsDetected = new TH1F("eventsDetected", "Detected Events per Rigidity Bin", 32, binEdges);
+    TH1F *hEventsSelected = new TH1F("eventsSelected", "Selected Events per Rigidity Bin", 32, binEdges);
+
     // Get relevant histograms
     hEventsDetected = (TH1F*) histFile->Get("eventsDetected");
     hEventsSelected = (TH1F*) histFile->Get("eventsSelected");
@@ -160,6 +164,9 @@ void LIMI::run() {
     // (2/?)
     //-------------------------------------------------------------------------------
     cout << "Creating ExposureTime graph... (2/?)" << endl;
+
+    // Create histograms
+    TH1F hExposureTime = new TH1F("exposureTime", "Exposure Time per Rigidity Bin", 32, binEdges);
 
     // Get relevant histograms
     hExposureTime = (TH1F*) histFile->Get("exposureTime");
