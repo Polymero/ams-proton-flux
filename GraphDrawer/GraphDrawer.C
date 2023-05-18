@@ -137,8 +137,6 @@ void LIMI::run() {
         eventsSelectedErrors[i] = TMath::Sqrt(eventsSelected[i]);
 
     }
-    
-    cout << eventsDetected[0] << endl;
 
     // Create TGraphs
     TGraphErrors *gEventsDetected = new TGraphErrors(binNumber, binCentres, eventsDetected, binErrors, eventsDetectedErrors);
@@ -183,7 +181,9 @@ void LIMI::run() {
 
     // Fill arrays
     for (int i=0; i < binNumber; i++) {
+
         exposureTime[i] = hExposureTime->GetBinContent(i + 1);
+
     }
 
     // Create TGraphs
