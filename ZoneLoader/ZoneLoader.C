@@ -22,6 +22,7 @@
 #include "TCanvas.h"
 #include "TObject.h"
 #include "TString.h"
+#include "TSystem.h"
 // Local headers
 #include "../Header Files/Ntp.h"
 
@@ -53,7 +54,7 @@ class MIRJA {
     double rigidityCutOff = 1.2;
 
     // New file object
-    TFile *f = new TFile("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLoader/ZoneAMS02.root", "recreate");
+    TFile *f = new TFile("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLoader/Zone02AMS02.root", "recreate");
 
     // RTI map
     map<int, std::pair<float, float>> RTIMap = map<int, std::pair<float, float>>();
@@ -101,8 +102,14 @@ class MIRJA {
 
         // Read the data trees
         for (int i = fileStart; i <= fileEnd; i++) {
-            chainCompact->Add(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i));
-            chainRTI->Add(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i));
+
+            if (gSystem->AccessPathName(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i))) {
+
+                chainCompact->Add(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i));
+                chainRTI->Add(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i));
+
+            }
+
         }
 
         // Set branch addresses
@@ -287,8 +294,11 @@ void MIRJA::run() {
 
 void ZoneLoader() {
     
-    const int fileStart = 1307499168;
-    const int fileEnd   = 1309717509;
+    // const int fileStart = 1307499168;
+    // const int fileEnd   = 1309717509;
+
+    const int fileStart = 1309717509;
+    const int fileEnd   = 1311935851;
 
     MIRJA *classMirja = new class MIRJA(fileStart, fileEnd);
 
