@@ -161,7 +161,6 @@ void LIMI::run() {
 
     // Axes
     cEvents->SetLogy();
-    gEventsDetected->SetMinimum(1);
     gEventsDetected->GetXaxis()->SetTitle("R [GV]");
     gEventsDetected->GetYaxis()->SetTitle("Events");
 
@@ -176,10 +175,10 @@ void LIMI::run() {
     cout << "Creating ExposureTime graph... (2/?)" << endl;
 
     // Create histograms
-    TH1F *hExposureTime = new TH1F("exposureTime", "Exposure Time per Rigidity Bin", 32, binEdges);
+    TH1F *hExposureTime = new TH1F();
 
     // Get relevant histograms
-    hExposureTime = (TH1F*) histFile->Get("exposureTime");
+    hExposureTime = (TH1F*)histFile->Get("exposureTime");
 
     // Set arrays
     double exposureTime[binNumber];
