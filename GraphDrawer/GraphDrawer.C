@@ -39,8 +39,8 @@ class LIMI {
     // ATTRIBUTES
     //-------------------------------------------------------------------------------
 
-    // Rigidity bins
-    const int Bin_num = 32;
+    // Rigidity bins (based on equal logarithmic widths)
+    const int binNumber = 32;
     double binEdges[32 + 1] = {
         1.00, 1.16, 1.33, 1.51, 1.71, 1.92, 2.15, 2.40, 2.67, 2.97, 3.29, 3.64, 4.02,
         4.43, 4.88, 5.37, 5.90, 6.47, 7.09, 7.76, 8.48, 9.26, 10.1, 11.0, 12.0, 13.0,
@@ -49,8 +49,8 @@ class LIMI {
     double binErrors[32];
     double binCentres[32];
 
-    // Rigidity cut-off level
-    double Rig_Cut_Level = 1.2;
+    // Rigidity cut-off level (based on ?)
+    double rigidityCutOff = 1.2;
 
     //-------------------------------------------------------------------------------
     // CONSTRUCTORS
@@ -70,9 +70,11 @@ class LIMI {
             binCentres[i] = (binEdges[i + 1] + binEdges[i]) / 2;
         }
 
-        // Retrieve histogram ROOT file $ Hischaajat.C
         cout << "Trying to load Histogram file..." << endl;
+
+        // Retrieve histogram ROOT file $ Hischaajat.C
         TFile *histFile = new TFile("../ZoneLoader/ZoneAMS02.root");
+
         cout << "   ...File loaded!" << endl;
 
         cout << "\nClass succesfully constructed!\n" << endl;
