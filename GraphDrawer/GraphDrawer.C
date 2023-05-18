@@ -157,6 +157,7 @@ void LIMI::run() {
 
     // Axes
     cEvents->SetLogy();
+    gEventsDetected->SetMinimum(1);
     gEventsDetected->GetXaxis()->SetTitle("R [GV]");
     gEventsDetected->GetYaxis()->SetTitle("Events");
 
@@ -194,7 +195,7 @@ void LIMI::run() {
     gExposureTime->Draw("AP");
 
     // Styling
-    gExposureTime->SetMarkerSize(20);
+    gExposureTime->SetMarkerStyle(20);
     gExposureTime->SetMarkerSize(1);
     gExposureTime->SetMarkerColor(kRed);
 
