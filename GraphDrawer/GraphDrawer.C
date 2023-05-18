@@ -540,10 +540,10 @@ void LIMI::run() {
     // Styling
     gScaledFlux->SetMarkerStyle(20);
     gScaledFlux->SetMarkerSize(1);
-    gFgScaledFluxlux->SetMarkerColor(kRed);
+    gScaledFluxlux->SetMarkerColor(kRed);
 
     // Axes
-    gScaledFlux->SetLogy();
+    cScaledFlux->SetLogy();
     gScaledFlux->GetXaxis()->SetTitle("R [GV]");
     gScaledFlux->GetYaxis()->SetTitle("Flux R^2.7 [m^-2 sr^-1 s^-1 GV^1.7]");
 
