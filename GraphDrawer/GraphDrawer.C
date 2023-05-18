@@ -540,7 +540,7 @@ void LIMI::run() {
     // Styling
     gScaledFlux->SetMarkerStyle(20);
     gScaledFlux->SetMarkerSize(1);
-    gScaledFluxlux->SetMarkerColor(kRed);
+    gScaledFlux->SetMarkerColor(kRed);
 
     // Axes
     cScaledFlux->SetLogy();
