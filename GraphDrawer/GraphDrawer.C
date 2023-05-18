@@ -137,6 +137,8 @@ void LIMI::run() {
         eventsSelectedErrors[i] = TMath::Sqrt(eventsSelected[i]);
 
     }
+    
+    cout << eventsDetected << endl;
 
     // Create TGraphs
     TGraphErrors *gEventsDetected = new TGraphErrors(binNumber, binCentres, eventsDetected, binErrors, eventsDetectedErrors);
