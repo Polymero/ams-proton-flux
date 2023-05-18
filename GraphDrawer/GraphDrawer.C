@@ -71,7 +71,7 @@ class LIMI {
         }
 
         // Retrieve histogram ROOT file $ Hischaajat.C
-        cout << "Trying to load Histogram file..." << flush
+        cout << "Trying to load Histogram file..." << endl;
         TFile *histFile = new TFile("../ZoneLoader/ZoneAMS02.root");
         cout << "   ...File loaded!" << endl;
 
