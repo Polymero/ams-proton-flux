@@ -4,6 +4,6 @@ output     = ZoneLoader.$(ClusterId).$(ProcId).out
 error      = ZoneLoader.$(ClusterId).$(ProcId).err
 log        = ZoneLoader.$(ClusterId).log
 
-+JobFlavour = "longlunch"
++JobFlavour = "tomorrow"
 
 queue
