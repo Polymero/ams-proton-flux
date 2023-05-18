@@ -70,13 +70,6 @@ class LIMI {
             binCentres[i] = (binEdges[i + 1] + binEdges[i]) / 2;
         }
 
-        cout << "Trying to load Histogram file..." << endl;
-
-        // Retrieve histogram ROOT file $ Hischaajat.C
-        TFile *histFile = new TFile("../ZoneLoader/ZoneAMS02.root");
-
-        cout << "   ...File loaded!" << endl;
-
         cout << "\nClass succesfully constructed!\n" << endl;
 
     };
@@ -104,6 +97,17 @@ class LIMI {
 void LIMI::run() {
 
     cout << "Starting LIMI.run()..." << endl;
+
+
+    //-------------------------------------------------------------------------------
+    // (0/?)
+    //-------------------------------------------------------------------------------
+    cout << "Trying to load Histogram file..." << endl;
+
+    // Retrieve histogram ROOT file $ Hischaajat.C
+    TFile *histFile = new TFile("../ZoneLoader/ZoneAMS02.root");
+
+    cout << "   ...File loaded!" << endl;
 
 
     //-------------------------------------------------------------------------------
