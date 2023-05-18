@@ -1,0 +1,10 @@
+executable = ZoneLooper.sh
+arguments  = $(ProcId)
+output     = output/ZoneLoader.$(ClusterId).$(ProcId).out
+error      = error/ZoneLoader.$(ClusterId).$(ProcId).err
+log        = log/ZoneLoader.$(ClusterId).log
+
++JobFlavour = "tomorrow"
+
+queue 2
+
