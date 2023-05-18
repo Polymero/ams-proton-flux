@@ -130,7 +130,7 @@ void LIMI::run() {
     // Fill arrays
     for (int i=0; i < binNumber; i++) {
         
-        cout << hEventsDetected->GetBinContent(i + 1); << endl;
+        cout << hEventsDetected->GetBinContent(i + 1) << endl;
 
         eventsDetected[i] = hEventsDetected->GetBinContent(i + 1);
         eventsSelected[i] = hEventsSelected->GetBinContent(i + 1);
