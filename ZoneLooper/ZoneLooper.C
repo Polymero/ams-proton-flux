@@ -78,6 +78,8 @@ class MIRJA {
     NtpCompact *classCompact    = new NtpCompact();
     NtpSHeader *classSHeader    = new class NtpSHeader();
     RTIInfo *classRTI           = new class RTIInfo();
+    // Files
+    TFile *f = new TFile();
 
 
     //-------------------------------------------------------------------------------
@@ -98,7 +100,7 @@ class MIRJA {
         }
 
         // New file object
-        TFile *f = new TFile(Form("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLoader/AMS02Zone%d.root", zoneIndex), "recreate");
+        f = TFile(Form("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLoader/AMS02Zone%d.root", zoneIndex), "recreate");
 
         // Get correct root files according to the zone index
         // int utcint[129] = {
