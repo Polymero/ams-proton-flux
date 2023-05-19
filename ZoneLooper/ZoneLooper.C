@@ -134,6 +134,10 @@ class MIRJA {
 
             if (gSystem->AccessPathName(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i))) {
 
+                ;
+
+            } else {
+
                 chainCompact->Add(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i));
                 chainRTI->Add(Form("/eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/%d.root", i));
 
