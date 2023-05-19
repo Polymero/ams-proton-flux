@@ -100,7 +100,7 @@ class MIRJA {
         }
 
         // New file object
-        f = TFile(Form("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLoader/AMS02Zone%d.root", zoneIndex), "recreate");
+        f = (TFile*)TFile(Form("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLoader/AMS02Zone%d.root", zoneIndex), "recreate");
 
         // Get correct root files according to the zone index
         // int utcint[129] = {
