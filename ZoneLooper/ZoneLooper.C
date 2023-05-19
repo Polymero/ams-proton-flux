@@ -321,7 +321,7 @@ void MIRJA::run() {
 // MAIN
 //-----------------------------------------------------------------------------------
 
-void ZoneLoader(int zoneIndex) {
+void ZoneLooper(int zoneIndex) {
 
     MIRJA *classMirja = new class MIRJA(zoneIndex);
 
