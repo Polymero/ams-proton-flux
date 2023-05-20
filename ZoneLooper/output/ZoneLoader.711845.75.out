@@ -1,0 +1,24 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.20/08                        https://root.cern |
+  | (c) 1995-2020, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Aug 18 2020, 14:40:33                 |
+  | From tags/v6-20-08@v6-20-08                                      |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+
+Processing /afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLooper/ZoneLooper.C(75)...
+
+Class succesfully constructed!
+
+Starting MIRJA.run()...
+Looping over RTIInfo data... (1/2)
+Number of RTIInfo entries: 2190513
+
+Looping over Compact data... (2/2)
+Number of Compact entries: 268626987
+
+Saving all my hard work...
+
+All done! :)
+

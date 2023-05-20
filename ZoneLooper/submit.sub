@@ -6,5 +6,5 @@ log        = log/ZoneLoader.$(ClusterId).log
 
 +JobFlavour = "tomorrow"
 
-queue 2
+queue 128
 
