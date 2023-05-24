@@ -81,29 +81,8 @@ class MIRJA {
     NtpCompact *classCompact    = new NtpCompact();
     NtpSHeader *classSHeader    = new class NtpSHeader();
     RTIInfo *classRTI           = new class RTIInfo();
-
-
-    //-------------------------------------------------------------------------------
-    // CLASS CONSTRUCTORS
-    //-------------------------------------------------------------------------------
-
-    MIRJA(int zoneIndex) { // Default constructor
-
-        // ROOT gStyle configuration
-        gStyle->SetOptTitle(0);
-        gStyle->SetOptStat(0);
-        gStyle->SetOptLogx(1);
-
-        // Bin properties
-        for (int i=0; i < binNumber; i++) {
-            binErrors[i]  = (binEdges[i + 1] - binEdges[i]) / 2;
-            binCentres[i] = (binEdges[i + 1] + binEdges[i]) / 2;
-        }
-
-        // New file object
-        f = (TFile*)TFile::Open(Form("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLooper/Zones/AMS02Zone%d.root", zoneIndex), "recreate");
-
-        // Get correct root files according to the zone index
+    
+    // Get correct root files according to the zone index
 //         int utcint[129] = {
 //             1307499168, 1309717509, 1311935851, 1314154192, 1316372533, 1318590875, 1320809216, 
 //             1323027558, 1325245899, 1327464240, 1329682582, 1331900923, 1334119264, 1336337606, 
@@ -127,6 +106,27 @@ class MIRJA {
 //         };
         
         int utcint[3] = {1307499168, 1307499168, 1307499170};
+
+
+    //-------------------------------------------------------------------------------
+    // CLASS CONSTRUCTORS
+    //-------------------------------------------------------------------------------
+
+    MIRJA(int zoneIndex) { // Default constructor
+
+        // ROOT gStyle configuration
+        gStyle->SetOptTitle(0);
+        gStyle->SetOptStat(0);
+        gStyle->SetOptLogx(1);
+
+        // Bin properties
+        for (int i=0; i < binNumber; i++) {
+            binErrors[i]  = (binEdges[i + 1] - binEdges[i]) / 2;
+            binCentres[i] = (binEdges[i + 1] + binEdges[i]) / 2;
+        }
+
+        // New file object
+        f = (TFile*)TFile::Open(Form("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLooper/Zones/AMS02Zone%d.root", zoneIndex), "recreate");
 
         // Read the data trees
         for (int i = utcint[zoneIndex]; i < utcint[zoneIndex + 1]; i++) {
