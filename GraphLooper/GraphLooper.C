@@ -489,7 +489,7 @@ int KANDOR::run(int zoneIndex) {
 
         }
 
-    }
+    }   
 
     // Create TGraphs
     TGraphErrors *gFlux = new TGraphErrors(binNumber, binCentres, flux, binErrors, fluxErrors);
@@ -554,7 +554,7 @@ int KANDOR::run(int zoneIndex) {
 
     cout << "\nAll done! :)\n" << endl;
 
-}
+};
 
 
 //-----------------------------------------------------------------------------------
