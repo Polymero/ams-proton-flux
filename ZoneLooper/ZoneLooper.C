@@ -311,6 +311,8 @@ void MIRJA::run() {
     // SAVE
     //-------------------------------------------------------------------------------
     cout << "\nSaving all my hard work..." << endl;
+    
+    exposureTime->Write();
 
     f->Write();
     f->Close();
