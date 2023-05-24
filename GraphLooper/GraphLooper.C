@@ -554,7 +554,9 @@ int KANDOR::run(int zoneIndex) {
 
     cout << "\nAll done! :)\n" << endl;
 
-};
+    return hEventsSelected->GetBinContent(0);
+
+}
 
 
 //-----------------------------------------------------------------------------------
