@@ -101,7 +101,7 @@ class MIRJA {
         }
 
         // New file object
-        f = (TFile*)TFile::Open(Form("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLooper/AMS02Zone%d.root", zoneIndex), "recreate");
+        f = (TFile*)TFile::Open(Form("/afs/cern.ch/user/s/svenenda/public/ams-proton-flux/ZoneLooper/Zones/AMS02Zone%d.root", zoneIndex), "recreate");
 
         // Get correct root files according to the zone index
 //         int utcint[129] = {
