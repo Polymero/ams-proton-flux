@@ -126,7 +126,7 @@ class MIRJA {
 //             1587010179, 1589228521, 1591446862
 //         };
         
-        int utcint[2] = {1307499168, 1307499169};
+        int utcint[3] = {1307499168, 1307499168, 1307499170};
 
         // Read the data trees
         for (int i = utcint[zoneIndex]; i < utcint[zoneIndex + 1]; i++) {
