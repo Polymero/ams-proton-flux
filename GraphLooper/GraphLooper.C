@@ -567,7 +567,7 @@ void GraphLooper() {
     KANDOR *classKandor = new class KANDOR();
 
     // Set Zone Event array
-    double zoneEvents[binNumber];
+    double zoneEvents[classKandor->binNumber];
 
     // Fill array and generate individual images (through KANDOR::run())
     for (int i=0; i < 128; i++) {
@@ -577,7 +577,7 @@ void GraphLooper() {
     }
 
     // Create TGraphs
-    TGraphErrors *gZoneEvents = new TGraphErrors(binNumber, binCentres, zoneEvents, binErrors, 0);
+    TGraphErrors *gZoneEvents = new TGraphErrors(classKandor->binNumber, classKandor->binCentres, zoneEvents, classKandor->binErrors, 0);
 
     // Create TCanvas
     TCanvas *cZoneEvents = new TCanvas("cZoneEvents", "Events per Time Zone");
