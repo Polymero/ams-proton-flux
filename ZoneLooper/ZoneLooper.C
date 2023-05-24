@@ -312,8 +312,20 @@ void MIRJA::run() {
     //-------------------------------------------------------------------------------
     cout << "\nSaving all my hard work..." << endl;
     
+    // Writing the histograms to ROOT file
     exposureTime->Write();
+    eventsDetected->Write();
+    eventsSelected->Write();
+    triggersPhysical->Write();
+    triggersBias->Write();
+    baseTracker->Write();
+    baseTOF->Write();
+    cutParticle->Write();
+    cutBeta->Write();
+    cutChiSquared->Write();
+    cutInnerLayer->Write();
 
+    // Write and close ROOT file
     f->Write();
     f->Close();
 
