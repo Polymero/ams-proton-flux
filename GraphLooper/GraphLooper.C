@@ -105,7 +105,7 @@ int KANDOR::run(int zoneIndex) {
     cout << "Trying to load Histogram files..." << endl;
 
     // Retrieve histogram ROOT file
-    TFile *histFile = new TFile(Form("../ZoneLooper/AMS02Zone%d.root", zoneIndex));
+    TFile *histFile = new TFile(Form("../ZoneLooper/Zones/AMS02Zone%d.root", zoneIndex));
     TFile *mcFile   = new TFile("../HistMaker/ProtonHistogramsAMS02.root");
 
     cout << "   ...File loaded!" << endl;
