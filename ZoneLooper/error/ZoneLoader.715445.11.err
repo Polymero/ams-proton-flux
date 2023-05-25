@@ -1,0 +1,6 @@
+Warning in <TClass::Init>: no dictionary for class VPSArchive is available
+Warning in <TClass::Init>: no dictionary for class VPSCategory is available
+Warning in <TClass::Init>: no dictionary for class RichOccupancy is available
+Error in <TFile::TFile>: file /eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/1332033883.root does not exist
+Error in <TFile::TFile>: file /eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/1332056034.root does not exist
+Error in <TFile::TFile>: file /eos/ams/group/dbar/release_v7/e1_vdev_200421/neg/ISS.B1130/pass7/1332147463.root does not exist
